@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suggested Grocery List</title>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            background-color: #f8f9fa;
+            color: #333;
+            padding: 20px;
+            max-width: 600px;
+            margin: 20px auto;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #4a90e2;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #2e7d32;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+        }
+        ul {
+            list-style: none; /* Use checkboxes or bullets potentially */
+            padding-left: 0;
+        }
+        li {
+            margin-bottom: 8px;
+            background-color: #fff;
+            padding: 8px 12px;
+            border-radius: 4px;
+            border: 1px solid #eee;
+        }
+         li::before { /* Optional: custom bullet */
+            content: "🛒";
+            margin-right: 8px;
+        }
+        strong {
+            font-weight: 600;
+        }
+         @media print { /* Basic print styling */
+            body {
+                box-shadow: none;
+                border: none;
+                margin: 0;
+                max-width: 100%;
+            }
+            h1, h2 {
+                color: #000; /* Print in black */
+            }
+            li::before {
+                 content: "- "; /* Simpler print bullet */
+             }
+        }
+    </style>
+</head>
+<body>
+    <h1>Suggested Weekly Grocery List</h1>
+    <p>This is an approximate list based on the diet plan. Adjust quantities based on your specific needs and portion sizes.</p>
+
+    <h2>Proteins</h2>
+    <ul>
+        <li>Eggs (Approx. 15-17)</li>
+        <li>Chicken Breast (Approx. 4-5 portions)</li>
+        <li>Chicken Thighs (1 portion)</li>
+        <li>Paneer (Approx. 2 portions)</li>
+        <li>Daal (Lentils - Moong or mixed)</li>
+    </ul>
+
+    <h2>Vegetables</h2>
+    <ul>
+        <li>Avocado (Approx. 2)</li>
+        <li>Mixed Salad Greens (Lettuce, etc.)</li>
+        <li>Broccoli</li>
+        <li>Carrots</li>
+        <li>Spinach</li>
+        <li>Onion</li>
+        <li>Green Chilli</li>
+        <li>Cucumber</li>
+        <li>Other Steamed Vegetables (Your choice - e.g., green beans, cauliflower)</li>
+    </ul>
+
+    <h2>Fruits</h2>
+    <ul>
+        <li>Apples (1)</li>
+        <li>Pears (1)</li>
+        <li>Oranges (1)</li>
+        <li>Banana (1 small)</li>
+    </ul>
+
+     <h2>Dairy & Other</h2>
+    <ul>
+        <li>Greek Yogurt / Plain Yogurt</li>
+        <li>Milk (for smoothie & tea)</li>
+        <li>Honey (small amount)</li>
+        <li>Wholemeal Toast (1 slice)</li>
+        <li>Olive Oil (minimal for frying)</li>
+    </ul>
+
+     <h2>Pantry & Spices</h2>
+    <ul>
+        <li>Masala Spices (for chicken)</li>
+        <li>Tikka Style Spices (for chicken)</li>
+        <li>Pakistani Style Spices (for chicken)</li>
+        <li>Salt, Pepper</li>
+        <li>Tea bags/leaves</li>
+        <li>Coffee (optional)</li>
+     </ul>
+
+</body>
+</html>

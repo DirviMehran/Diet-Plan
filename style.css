@@ -1,0 +1,352 @@
+/* Basic Reset & Font */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa; /* Soft light background */
+    color: #333;
+    padding-bottom: 50px; /* Space for footer */
+}
+
+/* Header */
+header {
+    background-color: #4a90e2; /* Vibrant blue */
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-bottom: 20px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+header .subtitle {
+    font-weight: 300;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Motivational Banner */
+.motivational-banner {
+    text-align: center;
+    margin: 0 auto 30px auto;
+    max-width: 900px; /* Limit banner width */
+    padding: 0 15px;
+}
+
+.motivational-banner img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Navigation Buttons */
+.day-navigation {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+    gap: 10px;
+    margin-bottom: 30px;
+    padding: 0 15px;
+}
+
+.nav-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    border-radius: 25px; /* Rounded buttons */
+    background-color: #ffffff; /* White buttons */
+    color: #4a90e2; /* Blue text */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-button:hover {
+    background-color: #e0f7fa; /* Light cyan on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+.nav-button.active {
+    background-color: #ff6b6b; /* Coral color for active */
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 4px 8px rgba(255, 107, 107, 0.4);
+}
+
+/* Main Content Area */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 15px; /* Padding for mobile */
+}
+
+/* Day Content Styling */
+.day-content {
+    display: none; /* Hide all days by default */
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px; /* Space below each day card */
+    border-left: 5px solid #4a90e2; /* Accent border */
+}
+
+.day-content.active {
+    display: block; /* Show the active day */
+}
+
+.day-content h2 {
+    text-align: center;
+    color: #ff6b6b; /* Match active button color */
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+    border-bottom: 2px dashed #e0e0e0;
+    padding-bottom: 10px;
+}
+
+/* Day specific motivation image */
+.day-motivation {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.day-motivation img {
+    max-width: 100%;
+    max-height: 250px; /* Limit image height */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Meal Sections */
+.meal-section {
+    margin-bottom: 25px;
+    padding: 15px;
+    background-color: #f0f8ff; /* Very light blue background for meals */
+    border-radius: 8px;
+    border: 1px solid #d6eaf8;
+}
+
+.meal-section h3 {
+    color: #2e7d32; /* Green for meal titles */
+    margin-bottom: 8px;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+}
+
+.meal-section h3 i {
+    margin-right: 10px;
+    color: #ffa726; /* Orange icon color */
+}
+
+.meal-section .time {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #666;
+    margin-left: auto; /* Push time to the right */
+    background-color: #e3f2fd;
+    padding: 3px 8px;
+    border-radius: 10px;
+}
+
+.meal-section p {
+    color: #444;
+    margin-left: 28px; /* Indent meal description */
+}
+
+/* "Ate Something Extra" Section */
+.extra-section {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #fff8e1; /* Light yellow background */
+    border: 1px dashed #ffcc80; /* Dashed orange border */
+    border-radius: 8px;
+}
+
+.extra-section label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 600;
+    color: #c62828; /* Reddish color for emphasis */
+}
+
+.extra-checkbox {
+    margin-right: 10px;
+    transform: scale(1.2); /* Make checkbox slightly larger */
+    accent-color: #ff6b6b; /* Match active button color */
+}
+
+.extra-details {
+    display: none; /* Hidden by default */
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    resize: vertical; /* Allow vertical resizing */
+    min-height: 60px;
+}
+
+/* General Info Sections (Tea/Coffee, Water) */
+.general-info {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #e8f5e9; /* Light green background */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+.general-info h3 {
+    color: #1b5e20; /* Darker green */
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #c8e6c9;
+    padding-bottom: 8px;
+}
+
+.general-info h3 i {
+    margin-right: 10px;
+    color: #66bb6a; /* Lighter green icon */
+}
+
+.tea-coffee-schedule {
+    margin-bottom: 25px;
+}
+
+.tea-coffee-schedule ul {
+    list-style: none;
+    padding-left: 5px;
+}
+
+.tea-coffee-schedule li {
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.tea-coffee-schedule .time {
+    font-weight: 600;
+    color: #555;
+    margin-right: 5px;
+}
+
+.water-intake p {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: #0d47a1; /* Dark blue for water text */
+}
+
+.water-intake strong {
+    color: #0277bd; /* Slightly lighter blue */
+}
+
+.water-visual {
+    font-size: 1.8rem;
+    color: #4fc3f7; /* Light blue water drops */
+    margin-top: 10px;
+    letter-spacing: 5px; /* Space out the drops */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px 15px;
+    font-size: 0.9rem;
+    color: #666;
+    background-color: #e9ecef; /* Footer background */
+    border-top: 1px solid #dee2e6;
+}
+
+.grocery-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #28a745; /* Green button for grocery */
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.grocery-link:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    header {
+        padding: 1.5rem 1rem;
+    }
+    header h1 {
+        font-size: 1.8rem;
+    }
+    header .subtitle {
+        font-size: 1rem;
+    }
+    .day-navigation {
+        gap: 8px;
+    }
+    .nav-button {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+    .day-content h2 {
+        font-size: 1.5rem;
+    }
+    .meal-section h3 {
+        font-size: 1.1rem;
+        flex-direction: column; /* Stack icon/title/time vertically */
+        align-items: flex-start;
+    }
+    .meal-section .time {
+        margin-left: 0;
+        margin-top: 5px;
+        background-color: transparent;
+        padding: 0;
+    }
+     .meal-section p {
+         margin-left: 0; /* Remove indent on smaller screens */
+         margin-top: 5px;
+     }
+    .general-info h3 {
+        font-size: 1.1rem;
+    }
+    .water-visual {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .day-navigation {
+       justify-content: space-around; /* Better spacing on small screens */
+    }
+    .nav-button {
+        flex-basis: calc(33% - 10px); /* Roughly 3 buttons per row */
+        text-align: center;
+    }
+    .motivational-banner img {
+        border-radius: 5px; /* Smaller radius on mobile */
+    }
+     .day-content {
+        padding: 15px;
+    }
+}
